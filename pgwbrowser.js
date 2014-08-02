@@ -9,14 +9,14 @@
 ;(function($){
     $.pgwBrowser = function() {
 
-        var pgwBrowser = {};        
+        var pgwBrowser = {};
         pgwBrowser.userAgent = navigator.userAgent;
         pgwBrowser.browser = {};
         pgwBrowser.viewport = {};
         pgwBrowser.os = {};
 
         // The order of these arrays is important, be careful if you change it.
-        
+
         var browserData = [
             { name: 'Chrome',            group: 'Chrome',   identifier: 'Chrome/([0-9.]*)'     },
             { name: 'Chromium',          group: 'Chrome',   identifier: 'Chromium/([0-9.]*)'   },
@@ -24,7 +24,7 @@
             { name: 'Firefox',           group: 'Firefox',  identifier: 'Firefox/([0-9.]*)'    },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera ([0-9.]*)'      },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera/([0-9.]*)',     versionIdentifier: 'Version/([0-9.]*)' },
-            { name: 'Safari',            group: 'Safari',   identifier: 'Safari/([0-9.]*)',    versionIdentifier: 'Version/([0-9.]*)' },              
+            { name: 'Safari',            group: 'Safari',   identifier: 'Safari/([0-9.]*)',    versionIdentifier: 'Version/([0-9.]*)' },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'MSIE ([a-zA-Z0-9.]*)' },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'Trident/([0-9.]*)',   versionIdentifier: 'rv:([0-9.]*)' }
         ];
@@ -74,7 +74,7 @@
                     if (browserData[i].versionIdentifier) {
                         var versionRegExp = new RegExp(browserData[i].versionIdentifier.toLowerCase());
                         var versionRegExpResult = versionRegExp.exec(userAgent);
-                        
+
                         if (versionRegExpResult != null && versionRegExpResult[1]) {
                             setBrowserVersion(versionRegExpResult[1]);
                         }
@@ -86,10 +86,10 @@
                     break;
                 }
             }
-            
+
             return true;
         };
-        
+
         // Set browser version
         var setBrowserVersion = function(version) {
             var splitVersion = version.split('.', 2);
@@ -104,10 +104,10 @@
             if (splitVersion[1]) {
                 pgwBrowser.browser.minorVersion = parseInt(splitVersion[1]);
             }
-            
+
             return true;
         };
-        
+
         //  Set OS data
         var setOsData = function() {
             var userAgent = pgwBrowser.userAgent.toLowerCase();
@@ -124,16 +124,16 @@
                     // Version defined
                     if (osData[i].version) {
                         setOsVersion(osData[i].version, (osData[i].versionSeparator) ? osData[i].versionSeparator : '.');
-                        
+
                     // Version detected
-                    } else if (osRegExpResult[1]) {                    
+                    } else if (osRegExpResult[1]) {
                         setOsVersion(osRegExpResult[1], (osData[i].versionSeparator) ? osData[i].versionSeparator : '.');
-                    
+
                     // Version identifier
                     } else if (osData[i].versionIdentifier) {
                         var versionRegExp = new RegExp(osData[i].versionIdentifier.toLowerCase());
                         var versionRegExpResult = versionRegExp.exec(userAgent);
-                        
+
                         if (versionRegExpResult != null && versionRegExpResult[1]) {
                             setOsVersion(versionRegExpResult[1], (osData[i].versionSeparator) ? osData[i].versionSeparator : '.');
                         }
@@ -142,18 +142,18 @@
                     break;
                 }
             }
-            
+
             return true;
         };
-        
+
         // Set OS version
         var setOsVersion = function(version, separator) {
             var splitVersion = version.split(separator, 2);
-            
+
             if (separator != '.') {
                 version = version.replace(new RegExp(separator, 'g'), '.');
             }
-            
+
             pgwBrowser.os.fullVersion = version;
 
             // Major version
@@ -165,21 +165,19 @@
             if (splitVersion[1]) {
                 pgwBrowser.os.minorVersion = parseInt(splitVersion[1]);
             }
-            
+
             return true;
         };
-        
+
         // Set viewport size
         var setViewportSize = function() {
             pgwBrowser.viewport.width = $(window).width();
             pgwBrowser.viewport.height = $(window).height();
             return true;
         };
-        
+
         // Set viewport orientation
         var setViewportOrientation = function() {
-            pgwBrowser.viewport.orientation = null;
-
             switch(window.orientation) {
                 case -90:
                 case 90:
@@ -201,9 +199,9 @@
 
         // Triggers
         $(window).on('orientationchange', function(e) {
-            setOrientation();
+            setViewportOrientation();
         });
-        
+
         $(window).resize(function(e) {
             setViewportSize();
         });
