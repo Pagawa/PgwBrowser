@@ -22,4 +22,4 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
-* 2014-08-XX - First commit (Version 1.0)
+* 2014-08-03 - First commit (Version 1.0)
