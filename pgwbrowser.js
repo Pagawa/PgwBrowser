@@ -13,7 +13,8 @@
         pgwBrowser.userAgent = navigator.userAgent;
         pgwBrowser.browser = {};
         pgwBrowser.viewport = {};
-        pgwBrowser.os = {};
+        pgwBrowser.os = {};        
+        resizeEvent = null;
 
         // The order of these arrays is important, be careful if you change it.
 
@@ -170,9 +171,25 @@
         };
 
         // Set viewport size
-        var setViewportSize = function() {
+        var setViewportSize = function(init) {
             pgwBrowser.viewport.width = $(window).width();
             pgwBrowser.viewport.height = $(window).height();
+
+            // Resize triggers
+            if (typeof init == 'undefined') {
+                if (resizeEvent == null) {
+                    $(window).trigger('PgwBrowser::StartResize');
+                } else {
+                    clearTimeout(resizeEvent);
+                }
+                
+                resizeEvent = setTimeout(function() {
+                    $(window).trigger('PgwBrowser::StopResize');
+                    clearTimeout(resizeEvent);
+                    resizeEvent = null;
+                }, 300);
+            }
+            
             return true;
         };
 
@@ -188,13 +205,16 @@
                     break; 
             }
 
+            // Orientation trigger
+            $(window).trigger('PgwBrowser::OrientationChange');
+
             return true;
         };
 
         // Initialization
         setBrowserData();
         setOsData();
-        setViewportSize();
+        setViewportSize(true);
         setViewportOrientation();
 
         // Triggers
