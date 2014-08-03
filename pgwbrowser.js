@@ -1,5 +1,5 @@
 /**
- * PgwBrowser - Version 1.0
+ * PgwBrowser - Version 1.1
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
@@ -178,13 +178,13 @@
             // Resize triggers
             if (typeof init == 'undefined') {
                 if (resizeEvent == null) {
-                    $(window).trigger('PgwBrowser::StartResize');
+                    $(window).trigger('PgwBrowser::StartResizing');
                 } else {
                     clearTimeout(resizeEvent);
                 }
                 
                 resizeEvent = setTimeout(function() {
-                    $(window).trigger('PgwBrowser::StopResize');
+                    $(window).trigger('PgwBrowser::StopResizing');
                     clearTimeout(resizeEvent);
                     resizeEvent = null;
                 }, 300);
