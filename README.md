@@ -22,5 +22,6 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
+* 2014-08-17 - Added more browsers and platforms (Version 1.2)
 * 2014-08-03 - Added resize and orientation events (Version 1.1)
 * 2014-08-02 - First commit (Version 1.0)
