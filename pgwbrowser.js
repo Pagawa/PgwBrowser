@@ -28,10 +28,10 @@
             { name: 'Opera Mini',        group: 'Opera',    identifier: 'Opera Mini/([0-9.]*)'     },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera ([0-9.]*)'          },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera/([0-9.]*)',         versionIdentifier: 'Version/([0-9.]*)' },
-            { name: 'Safari',            group: 'Safari',   identifier: 'Safari/([0-9.]*)',        versionIdentifier: 'Version/([0-9.]*)' },
             { name: 'IEMobile',          group: 'Explorer', identifier: 'IEMobile/([0-9.]*)'       },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'MSIE ([a-zA-Z0-9.]*)'     },
-            { name: 'Internet Explorer', group: 'Explorer', identifier: 'Trident/([0-9.]*)',       versionIdentifier: 'rv:([0-9.]*)' }
+            { name: 'Internet Explorer', group: 'Explorer', identifier: 'Trident/([0-9.]*)',       versionIdentifier: 'rv:([0-9.]*)' },
+            { name: 'Safari',            group: 'Safari',   identifier: 'Safari/([0-9.]*)',        versionIdentifier: 'Version/([0-9.]*)' }
         ];
 
         var osData = [
