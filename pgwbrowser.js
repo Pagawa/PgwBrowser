@@ -19,9 +19,9 @@
         // The order of the following arrays is important, be careful if you change it.
 
         var browserData = [
+            { name: 'Chromium',          group: 'Chrome',   identifier: 'Chromium/([0-9.]*)'       },
             { name: 'Chrome Mobile',     group: 'Chrome',   identifier: 'Chrome/([0-9.]*) Mobile', versionIdentifier: 'Chrome/([0-9.]*)'},
             { name: 'Chrome',            group: 'Chrome',   identifier: 'Chrome/([0-9.]*)'         },
-            { name: 'Chromium',          group: 'Chrome',   identifier: 'Chromium/([0-9.]*)'       },
             { name: 'Chrome for iOS',    group: 'Chrome',   identifier: 'CriOS/([0-9.]*)'          },
             { name: 'Android Browser',   group: 'Chrome',   identifier: 'CrMo/([0-9.]*)'           },
             { name: 'Firefox',           group: 'Firefox',  identifier: 'Firefox/([0-9.]*)'        },
@@ -46,19 +46,19 @@
             { name: 'Windows',                group: 'Windows',       identifier: 'Windows',                         },
             { name: 'Chrome OS',              group: 'Chrome OS',     identifier: 'CrOS',                            },
             { name: 'Android',                group: 'Android',       identifier: 'Android',                         versionIdentifier: 'Android ([a-zA-Z0-9.-]*)' },
-            { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                            versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '([_|.])' },
-            { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                            versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '([_|.])' },
-            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                       versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Cheetah',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])0([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Puma',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])1([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Jaguar',        group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])2([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Panther',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])3([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Tiger',         group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])4([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Leopard',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])5([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Snow Leopard',  group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])6([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Lion',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])7([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])8([0-9_.]*))', versionSeparator: '([_|.])' },
-            { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])9([0-9_.]*))', versionSeparator: '([_|.])' },
+            { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                            versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|.]' },
+            { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                            versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|.]' },
+            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                       versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Cheetah',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])0([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Puma',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])1([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Jaguar',        group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])2([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Panther',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])3([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Tiger',         group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])4([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Leopard',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])5([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Snow Leopard',  group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])6([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Lion',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])7([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])8([0-9_.]*))', versionSeparator: '[_|.]' },
+            { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|.])9([0-9_.]*))', versionSeparator: '[_|.]' },
             { name: 'Mac OS',                 group: 'Mac OS',        identifier: 'Mac OS'                           },
             { name: 'Ubuntu',                 group: 'Linux',         identifier: 'Ubuntu',                          versionIdentifier: 'Ubuntu/([0-9.]*)' },
             { name: 'Debian',                 group: 'Linux',         identifier: 'Debian',                          },
@@ -158,7 +158,11 @@
 
         // Set OS version
         var setOsVersion = function(version, separator) {
-            var splitVersion = version.split(separator, 2);
+            if (separator.substr(0, 1) == '[') {
+                var splitVersion = version.split(new RegExp(separator, 'g'), 2);
+            } else {
+                var splitVersion = version.split(separator, 2);
+            }
 
             if (separator != '.') {
                 version = version.replace(new RegExp(separator, 'g'), '.');
