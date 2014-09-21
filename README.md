@@ -1,7 +1,7 @@
 PgwBrowser
 =========
 
-The full documentation and an example are available on [PgwJS.com](http://pgwjs.com/pgwbrowser/).
+The full documentation and an example are available on [**PgwJS.com**/PgwBrowser](http://pgwjs.com/pgwbrowser/).
 
 
 Requirements
