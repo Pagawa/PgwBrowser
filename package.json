@@ -1,0 +1,28 @@
+{
+  "name": "pgwbrowser",
+  "title": "PgwBrowser",
+  "description": "Browser & OS / platform detection plugin for jQuery and Zepto",
+  "version": "1.2.0",
+  "main": "pgwbrowser.js",
+  "homepage": "https://pgwjs.com/pgwbrowser",
+  "author": "Jonathan M. Piat",
+  "license" : "GNU GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pagawa/PgwBrowser.git"
+  },
+  "keywords": [
+    "browser",
+    "os",
+    "platform",
+    "detection",
+    "support",
+    "mobile",
+    "jquery",
+    "jquery-plugin",
+    "zepto"
+  ],
+  "bugs": {
+    "url": "https://github.com/Pagawa/PgwBrowser/issues"
+  }
+}
