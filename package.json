@@ -4,7 +4,7 @@
   "description": "Browser & OS / platform detection plugin for jQuery and Zepto",
   "version": "1.3.0",
   "main": "pgwbrowser.js",
-  "homepage": "https://pgwjs.com/pgwbrowser",
+  "homepage": "http://pgwjs.com/pgwbrowser",
   "author": "Jonathan M. Piat",
   "license" : "GNU GPLv3",
   "repository": {
