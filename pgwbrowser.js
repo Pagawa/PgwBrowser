@@ -262,7 +262,7 @@
         if (pgwBrowser.os.group == 'Windows') {
             pgwBrowser.bit = platform.replace(/[^0-9]+/,'');
         } else if (pgwBrowser.os.group == 'Linux') {
-            if (platform.indexOf('64')) {
+            if (platform.indexOf('64') > -1) {
                 pgwBrowser.bit = '64'
             } else {
                 pgwBrowser.bit = '32'
