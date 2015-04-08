@@ -19,6 +19,9 @@
         // The order of the following arrays is important, be careful if you change it.
 
         var browserData = [
+            { name: 'Opera',             group: 'Opera',    identifier: 'OPR ([0-9.]*)'          },
+            { name: 'Opera',             group: 'Opera',    identifier: 'OPR/([0-9.]*)'          },
+            { name: 'Opera',             group: 'Opera',    identifier: 'OPR/([0-9.]*)',         versionIdentifier: 'Version/([0-9.]*)' },
             { name: 'Chromium',          group: 'Chrome',   identifier: 'Chromium/([0-9\.]*)'       },
             { name: 'Chrome Mobile',     group: 'Chrome',   identifier: 'Chrome/([0-9\.]*) Mobile', versionIdentifier: 'Chrome/([0-9\.]*)'},
             { name: 'Chrome',            group: 'Chrome',   identifier: 'Chrome/([0-9\.]*)'         },
