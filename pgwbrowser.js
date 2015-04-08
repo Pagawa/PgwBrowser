@@ -249,7 +249,7 @@
         setViewportOrientation();
 
         // Triggers
-        $(window).on('orientationchange', function(e) {
+        $(window).bind('orientationchange', function(e) {
             setViewportOrientation();
         });
 
