@@ -3,7 +3,7 @@
  *
  * Copyright 2014-2015, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
- * 
+ *
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 ;(function($){
@@ -13,12 +13,13 @@
         pgwBrowser.userAgent = navigator.userAgent;
         pgwBrowser.browser = {};
         pgwBrowser.viewport = {};
-        pgwBrowser.os = {};        
+        pgwBrowser.os = {};
         resizeEvent = null;
 
         // The order of the following arrays is important, be careful if you change it.
 
         var browserData = [
+            { name: 'Edge',              group: 'Edge',     identifier: 'Edge/([0-9\.]*)',          versionIdentifier: 'Edge/([0-9\.]*)' },
             { name: 'Chromium',          group: 'Chrome',   identifier: 'Chromium/([0-9\.]*)'       },
             { name: 'Chrome Mobile',     group: 'Chrome',   identifier: 'Chrome/([0-9\.]*) Mobile', versionIdentifier: 'Chrome/([0-9\.]*)'},
             { name: 'Chrome',            group: 'Chrome',   identifier: 'Chrome/([0-9\.]*)'         },
@@ -31,7 +32,6 @@
             { name: 'IEMobile',          group: 'Explorer', identifier: 'IEMobile/([0-9\.]*)'       },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'MSIE ([a-zA-Z0-9\.]*)'     },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'Trident/([0-9\.]*)',       versionIdentifier: 'rv:([0-9\.]*)' },
-            { name: 'Spartan',           group: 'Spartan',  identifier: 'Edge/([0-9\.]*)',          versionIdentifier: 'Edge/([0-9\.]*)' },
             { name: 'Safari',            group: 'Safari',   identifier: 'Safari/([0-9\.]*)',        versionIdentifier: 'Version/([0-9\.]*)' }
         ];
 
@@ -50,7 +50,7 @@
             { name: 'Android',                group: 'Android',       identifier: 'Android',                            versionIdentifier: 'Android ([a-zA-Z0-9\.-]*)' },
             { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
-            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                          versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },            
+            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                          versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Yosemite',      group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])10([0-9_\.]*))', versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])9([0-9_\.]*))',  versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])8([0-9_\.]*))',  versionSeparator: '[_|\.]' },
@@ -205,7 +205,7 @@
                     resizeEvent = null;
                 }, 300);
             }
-            
+
             return true;
         };
 
@@ -227,7 +227,7 @@
                         break;
                     default:
                         pgwBrowser.viewport.orientation = 'portrait';
-                        break; 
+                        break;
                 }
             }
 
