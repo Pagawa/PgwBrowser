@@ -51,6 +51,7 @@
             { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                          versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },            
+            { name: 'Mac OS X El Capitan',    group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])11([0-9_\.]*))', versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Yosemite',      group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])10([0-9_\.]*))', versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])9([0-9_\.]*))',  versionSeparator: '[_|\.]' },
             { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])8([0-9_\.]*))',  versionSeparator: '[_|\.]' },
