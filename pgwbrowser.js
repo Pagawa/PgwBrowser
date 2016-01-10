@@ -13,7 +13,7 @@
         pgwBrowser.userAgent = navigator.userAgent;
         pgwBrowser.browser = {};
         pgwBrowser.viewport = {};
-        pgwBrowser.os = {};        
+        pgwBrowser.os = {};
         resizeEvent = null;
 
         // The order of the following arrays is important, be careful if you change it.
@@ -43,10 +43,10 @@
             { name: 'Windows 8',              group: 'Windows',       identifier: 'Windows NT 6.2',                     version: '8.0' },
             { name: 'Windows 8.1',            group: 'Windows',       identifier: 'Windows NT 6.3',                     version: '8.1' },
             { name: 'Windows 10',             group: 'Windows',       identifier: 'Windows NT 10.0',                    version: '10.0' },
-            { name: 'Windows Phone',          group: 'Windows Phone', identifier: 'Windows Phone ([0-9\.]*)',           },
-            { name: 'Windows Phone',          group: 'Windows Phone', identifier: 'Windows Phone OS ([0-9\.]*)',        },
-            { name: 'Windows',                group: 'Windows',       identifier: 'Windows',                            },
-            { name: 'Chrome OS',              group: 'Chrome OS',     identifier: 'CrOS',                               },
+            { name: 'Windows Phone',          group: 'Windows Phone', identifier: 'Windows Phone ([0-9\.]*)'            },
+            { name: 'Windows Phone',          group: 'Windows Phone', identifier: 'Windows Phone OS ([0-9\.]*)'         },
+            { name: 'Windows',                group: 'Windows',       identifier: 'Windows'                             },
+            { name: 'Chrome OS',              group: 'Chrome OS',     identifier: 'CrOS'                                },
             { name: 'Android',                group: 'Android',       identifier: 'Android',                            versionIdentifier: 'Android ([a-zA-Z0-9\.-]*)' },
             { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
@@ -64,10 +64,10 @@
             { name: 'Mac OS X Cheetah',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])0([0-9_\.]*))',  versionSeparator: '[_|\.]' },
             { name: 'Mac OS',                 group: 'Mac OS',        identifier: 'Mac OS'                              },
             { name: 'Ubuntu',                 group: 'Linux',         identifier: 'Ubuntu',                             versionIdentifier: 'Ubuntu/([0-9\.]*)' },
-            { name: 'Debian',                 group: 'Linux',         identifier: 'Debian',                             },
-            { name: 'Gentoo',                 group: 'Linux',         identifier: 'Gentoo',                             },
-            { name: 'Linux',                  group: 'Linux',         identifier: 'Linux',                              },
-            { name: 'BlackBerry',             group: 'BlackBerry',    identifier: 'BlackBerry',                         }
+            { name: 'Debian',                 group: 'Linux',         identifier: 'Debian'                              },
+            { name: 'Gentoo',                 group: 'Linux',         identifier: 'Gentoo'                              },
+            { name: 'Linux',                  group: 'Linux',         identifier: 'Linux'                               },
+            { name: 'BlackBerry',             group: 'BlackBerry',    identifier: 'BlackBerry'                          }
         ];
 
         //  Set browser data
