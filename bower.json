@@ -1,0 +1,19 @@
+{
+  "name": "pgwbrowser",
+  "version": "1.2.0",
+  "main": "./pgwbrowser.js",
+  "dependencies": {
+    "jquery": ">=1.0.0"
+  },
+  "keywords": [
+    "browser",
+    "os",
+    "platform",
+    "detection",
+    "support",
+    "mobile",
+    "jquery",
+    "jquery-plugin",
+    "zepto"
+  ]
+}
