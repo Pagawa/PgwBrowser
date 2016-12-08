@@ -15,6 +15,7 @@
         pgwBrowser.viewport = {};
         pgwBrowser.os = {};
         resizeEvent = null;
+        var platform = window.navigator.platform;
 
         // The order of the following arrays is important, be careful if you change it.
 
@@ -257,6 +258,17 @@
         $(window).resize(function(e) {
             setViewportSize();
         });
+
+        // call bits
+        if (pgwBrowser.os.group == 'Windows') {
+            pgwBrowser.bit = platform.replace(/[^0-9]+/,'');
+        } else if (pgwBrowser.os.group == 'Linux') {
+            if (platform.indexOf('64') > -1) {
+                pgwBrowser.bit = '64'
+            } else {
+                pgwBrowser.bit = '32'
+            }
+        }
 
         return pgwBrowser;
     }
