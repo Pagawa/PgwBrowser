@@ -3,7 +3,7 @@
  *
  * Copyright 2014-2015, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
- * 
+ *
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 ;(function($){
@@ -28,6 +28,7 @@
             { name: 'Opera Mini',        group: 'Opera',    identifier: 'Opera Mini/([0-9\.]*)'     },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera ([0-9\.]*)'          },
             { name: 'Opera',             group: 'Opera',    identifier: 'Opera/([0-9\.]*)',         versionIdentifier: 'Version/([0-9\.]*)' },
+            { name: 'Opera',             group: 'Opera',    identifier: 'OPR/([0-9\.]*)',           versionIdentifier: 'OPR/([0-9\.]*)' },
             { name: 'IEMobile',          group: 'Explorer', identifier: 'IEMobile/([0-9\.]*)'       },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'MSIE ([a-zA-Z0-9\.]*)'     },
             { name: 'Internet Explorer', group: 'Explorer', identifier: 'Trident/([0-9\.]*)',       versionIdentifier: 'rv:([0-9\.]*)' },
@@ -50,19 +51,20 @@
             { name: 'Android',                group: 'Android',       identifier: 'Android',                            versionIdentifier: 'Android ([a-zA-Z0-9\.-]*)' },
             { name: 'iPad',                   group: 'iOS',           identifier: 'iPad',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
             { name: 'iPod',                   group: 'iOS',           identifier: 'iPod',                               versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
-            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                          versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },            
-            { name: 'Mac OS X El Capitan',    group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])11([0-9_\.]*))', versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Yosemite',      group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])10([0-9_\.]*))', versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])9([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])8([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Lion',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])7([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Snow Leopard',  group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])6([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Leopard',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])5([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Tiger',         group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])4([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Panther',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])3([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Jaguar',        group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])2([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Puma',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])1([0-9_\.]*))',  versionSeparator: '[_|\.]' },
-            { name: 'Mac OS X Cheetah',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])0([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'iPhone',                 group: 'iOS',           identifier: 'iPhone OS',                          versionIdentifier: 'OS ([0-9_]*)', versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Sierra',        group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])12\.([0-9_\.]*))', versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X El Capitan',    group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])11\.([0-9_\.]*))', versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Yosemite',      group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])10\.([0-9_\.]*))', versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Mavericks',     group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])9\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Mountain Lion', group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])8\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Lion',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])7\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Snow Leopard',  group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])6\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Leopard',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])5\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Tiger',         group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])4\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Panther',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])3\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Jaguar',        group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])2\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Puma',          group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])1\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
+            { name: 'Mac OS X Cheetah',       group: 'Mac OS',        identifier: 'Mac OS X (10([_|\.])0\.([0-9_\.]*))',  versionSeparator: '[_|\.]' },
             { name: 'Mac OS',                 group: 'Mac OS',        identifier: 'Mac OS'                              },
             { name: 'Ubuntu',                 group: 'Linux',         identifier: 'Ubuntu',                             versionIdentifier: 'Ubuntu/([0-9\.]*)' },
             { name: 'Debian',                 group: 'Linux',         identifier: 'Debian'                              },
@@ -206,7 +208,7 @@
                     resizeEvent = null;
                 }, 300);
             }
-            
+
             return true;
         };
 
@@ -228,7 +230,7 @@
                         break;
                     default:
                         pgwBrowser.viewport.orientation = 'portrait';
-                        break; 
+                        break;
                 }
             }
 
