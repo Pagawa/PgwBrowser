@@ -254,7 +254,7 @@
             setViewportOrientation();
         });
 
-        $(window).resize(function(e) {
+        $(window).on('resize', function(e) {
             setViewportSize();
         });
 
